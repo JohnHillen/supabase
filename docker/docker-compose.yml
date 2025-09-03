@@ -171,8 +171,6 @@ services:
       SUPABASE_ANON_KEY: ${ANON_KEY}
     volumes:
       - ./functions:/home/functions
-    depends_on:
-      - kong
     healthcheck:
       test: ["CMD", "wget", "--spider", "http://localhost:9000/functions/v1/health"]
       interval: 10s
