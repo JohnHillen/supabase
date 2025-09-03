@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   db:
-    image: supabase/postgres:15.2.0
+    image: supabase/postgres:15.14.1.000
     container_name: supabase-db
     restart: always
     environment:
@@ -39,7 +39,7 @@ services:
       retries: 5
 
   kong:
-    image: kong:3.4.2
+    image: kong/kong:3.9.1
     container_name: supabase-kong
     restart: always
     environment:
@@ -70,7 +70,7 @@ services:
       retries: 5
 
   rest:
-    image: postgrest/postgrest:v10.2.0
+    image: postgrest/postgrest:v13.0.6
     container_name: supabase-rest
     restart: always
     environment:
@@ -88,7 +88,7 @@ services:
       retries: 5
 
   realtime:
-    image: supabase/realtime:v2.12.0
+    image: supabase/realtime:v2.46.4
     container_name: supabase-realtime
     restart: always
     environment:
@@ -111,7 +111,7 @@ services:
       retries: 5
 
   auth:
-    image: supabase/gotrue:v2.60.2
+    image: supabase/gotrue:v2.179.0
     container_name: supabase-auth
     restart: always
     environment:
@@ -139,7 +139,7 @@ services:
       retries: 5
 
   storage:
-    image: supabase/storage-api:v0.44.2
+    image: supabase/storage-api:v1.26.4
     container_name: supabase-storage
     restart: always
     environment:
@@ -163,7 +163,7 @@ services:
       retries: 5
 
   functions:
-    image: supabase/edge-runtime:v1.10.3
+    image: supabase/edge-runtime:v1.69.6
     container_name: supabase-functions
     restart: always
     environment:
@@ -178,7 +178,7 @@ services:
       retries: 5
 
   studio:
-    image: supabase/studio:20231027-95c0c40
+    image: supabase/studio:2025.09.01-sha-8bf1fd5
     container_name: supabase-studio
     restart: always
     environment:
@@ -203,7 +203,7 @@ services:
       retries: 5
 
   pgmeta:
-    image: supabase/postgres-meta:v0.72.0
+    image: supabase/postgres-meta:v0.91.6
     container_name: supabase-pgmeta
     restart: always
     environment:
